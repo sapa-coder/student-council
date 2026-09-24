@@ -494,7 +494,7 @@ document.querySelectorAll("[data-n]").forEach(x => co.observe(x));
 $("#mq").innerHTML = [...DEPTS, ...DEPTS].map(d => `<span>${esc(d)}</span>`).join("");
 
 // ข้อความพิมพ์ทีละตัว (แก้ประโยคได้ที่นี่)
-const ph = ["เสียงของนักเรียนทุกคน", "ร่วมกันพัฒนาโรงเรียน", "แจ้งปัญหาได้ทุกเรื่อง"], ty = $("#type");
+const ph = ["ยินดีต้อนรับ", "เข้าสู่เว็บสภานักเรียน", "แจ้งปัญหาได้ทุกเรื่อง"], ty = $("#type");
 let pi = 0, ci = 0, del = false;
 (function tick(){
   if (rm){ ty.textContent = ph[0]; return; }
