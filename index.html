@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>คณะกรรมการสภานักเรียน โรงเรียนชัยนาทพิทยาคม</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&family=Sarabun:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2a1a4d;--soft:#6b5b8f;--pri:#6d3fc9;--deep:#4a2494;--gold:#b8923a;--glass:rgba(255,255,255,.55);--line:rgba(109,63,201,.16);--bg:#f1ebfb}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:Sarabun,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;min-height:100vh}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(600px 500px at 10% 5%,#cdb6f5 0,transparent 70%),radial-gradient(700px 600px at 95% 30%,#e4c9f2 0,transparent 70%),radial-gradient(600px 500px at 30% 100%,#b9a4ef 0,transparent 70%)}
+h1,h2,h3,.pf{font-family:Prompt,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pri);outline-offset:2px}
+/* header */
+header{position:sticky;top:0;z-index:20;background:var(--glass);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border-bottom:1px solid var(--line)}
+.bar{max-width:1180px;margin:auto;padding:10px 20px;display:flex;align-items:center;gap:14px}
+.crests{display:flex;gap:8px}
+.crest{width:52px;height:52px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;overflow:hidden;font:600 11px Prompt;color:var(--soft);text-align:center}
+.crest img{width:100%;height:100%;object-fit:contain}
+.brand h1{font-size:clamp(15px,2.4vw,21px);font-weight:600;color:var(--deep);line-height:1.25}
+.brand p{font-size:clamp(11px,1.6vw,13px);color:var(--soft)}
+nav{margin-left:auto;display:flex;gap:4px}
+nav a{text-decoration:none;font:500 14px Prompt;padding:8px 12px;border-radius:99px;color:var(--deep)}
+nav a:hover{background:rgba(109,63,201,.12)}
+@media(max-width:820px){nav{display:none}}
+/* sections */
+section{max-width:1180px;margin:auto;padding:56px 20px 8px}
+.sh{margin-bottom:26px}
+.sh h2{font-size:clamp(22px,3.4vw,32px);font-weight:600;color:var(--deep)}
+.sh p{color:var(--soft)}
+.sh::after{content:"";display:block;width:56px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--pri),var(--gold));margin-top:10px}
+/* hero posters */
+#hero{padding-top:32px}
+.posters{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.poster{aspect-ratio:3/4;border-radius:22px;overflow:hidden;position:relative;box-shadow:0 22px 50px -20px rgba(74,36,148,.55);border:1px solid rgba(255,255,255,.7);opacity:0;transform:translateY(-70px);animation:drop .9s cubic-bezier(.2,.8,.2,1) forwards}
+.poster:nth-child(1){animation-delay:.3s}.poster:nth-child(2){animation-delay:1.3s}.poster:nth-child(3){animation-delay:2.3s}
+@keyframes drop{to{opacity:1;transform:none}}
+.poster img{width:100%;height:100%;object-fit:cover;display:block}
+.ph{width:100%;height:100%;display:grid;place-items:center;text-align:center;padding:20px;color:#fff;font:500 18px Prompt}
+.ph small{display:block;font:300 13px Sarabun;opacity:.85;margin-top:4px}
+@media(max-width:700px){.posters{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}.poster{scroll-snap-align:center}}
+/* people */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+.card{background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.75);border-radius:20px;padding:18px;text-align:center;box-shadow:0 10px 30px -18px rgba(74,36,148,.5)}
+.card.lead{background:linear-gradient(160deg,rgba(255,255,255,.75),rgba(214,196,247,.6))}
+.avatar{width:104px;height:104px;border-radius:50%;margin:0 auto 12px;background:linear-gradient(135deg,#b79af0,#7a4ad6);display:grid;place-items:center;overflow:hidden;color:#fff;font:600 34px Prompt;border:3px solid #fff}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.card h3{font-size:16px;font-weight:500}
+.card .cls{color:var(--soft);font-size:14px}
+.card .pos{font:500 13px/1.4 Prompt;color:var(--gold);margin:6px 0 8px;min-height:36px}
+.card .ct{font-size:13px;color:var(--deep);word-break:break-all}
+.card .ct a{text-decoration:underline}
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.tab{font:500 14px Prompt;padding:9px 16px;border-radius:99px;border:1px solid var(--line);background:var(--glass);color:var(--deep);cursor:pointer;transition:.2s}
+.tab:hover{background:rgba(255,255,255,.9)}
+.tab[aria-selected=true]{background:var(--pri);color:#fff;border-color:var(--pri)}
+.empty{grid-column:1/-1;text-align:center;color:var(--soft);padding:30px}
+#cgrid.swap{animation:fade .35s}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+/* works */
+.wcard{background:var(--glass);border:1px solid rgba(255,255,255,.75);border-radius:20px;overflow:hidden;backdrop-filter:blur(12px)}
+.wimg{aspect-ratio:16/10;background:linear-gradient(135deg,#a98af0,#d9b8ee)}
+.wimg img{width:100%;height:100%;object-fit:cover;display:block}
+.wb{padding:16px}
+.tag{display:inline-block;font:500 12px Prompt;color:var(--deep);background:rgba(109,63,201,.12);padding:2px 10px;border-radius:99px}
+.wb h3{font-size:17px;font-weight:500;margin:8px 0 4px}
+.wb p{font-size:14px;color:var(--soft)}
+.wb time{font-size:12px;color:var(--soft)}
+#wgrid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+/* form */
+form{background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.8);border-radius:24px;padding:clamp(18px,4vw,34px);max-width:720px;display:grid;gap:16px}
+label{display:grid;gap:6px;font:500 14px Prompt;color:var(--deep)}
+input,select,textarea{font:16px Sarabun;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.85);color:var(--ink);width:100%}
+textarea{min-height:120px;resize:vertical}
+button.go{font:500 16px Prompt;padding:13px 22px;border:0;border-radius:99px;background:linear-gradient(135deg,#7d4fdc,#5a2fb0);color:#fff;cursor:pointer;justify-self:start;box-shadow:0 10px 24px -10px rgba(74,36,148,.8)}
+button.go:disabled{opacity:.6;cursor:wait}
+#msg{font-size:15px;min-height:22px}
+#msg.ok{color:#237a4b}#msg.err{color:#b3261e}
+/* footer */
+footer{margin-top:64px;background:rgba(74,36,148,.92);color:#efe7ff;text-align:center;padding:28px 20px;font-size:14px}
+footer p+p{margin-top:4px;color:#cdbcf2}
+/* ===== ลูกเล่น ===== */
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--pri),var(--gold));z-index:50}
+#glow{position:fixed;width:460px;height:460px;border-radius:50%;pointer-events:none;z-index:-1;background:radial-gradient(circle,rgba(125,79,220,.3),transparent 65%);transform:translate(-50%,-50%);left:50%;top:30%}
+.blob{position:fixed;z-index:-1;border-radius:50%;filter:blur(70px);opacity:.55;animation:float 18s ease-in-out infinite alternate}
+.b1{width:380px;height:380px;background:#b48cf5;top:8%;left:-5%}.b2{width:320px;height:320px;background:#f0b8e6;top:50%;right:-4%;animation-delay:-6s}.b3{width:340px;height:340px;background:#8fa2f5;bottom:-5%;left:35%;animation-delay:-11s}
+@keyframes float{to{transform:translate(60px,-80px) scale(1.15)}}
+.bar,.crest{transition:.3s}header.small .bar{padding:4px 20px}header.small .crest{width:40px;height:40px}
+nav a.on{background:var(--pri);color:#fff}
+.hero-t{text-align:center;margin-bottom:30px}
+.hero-t h2{font-size:clamp(34px,8vw,76px);font-weight:600;line-height:1.1;background:linear-gradient(100deg,#4a2494,#8f5fe0,#b8923a,#4a2494);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s linear infinite}
+@keyframes shine{to{background-position:-250% 0}}
+.hero-t p{font:400 clamp(16px,2.6vw,22px) Prompt;color:var(--soft);min-height:34px}
+.hero-t p::after{content:"|";margin-left:2px;color:var(--pri);animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.rv{opacity:0;transform:translateY(30px) scale(.96);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}.rv.done{transition:transform .2s ease-out,box-shadow .3s}
+.card,.wcard,.pin{position:relative}
+.pin{width:100%;height:100%;overflow:hidden}
+.tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.6),transparent 55%);opacity:0;transition:opacity .3s}
+.tilt:hover::after{opacity:1}
+.card{cursor:pointer}.card:hover{box-shadow:0 24px 50px -18px rgba(74,36,148,.65)}
+.wimg{overflow:hidden}.wimg img{transition:transform .7s}.wcard:hover .wimg img{transform:scale(1.1)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+.stat{background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.75);border-radius:20px;padding:18px;text-align:center}
+.stat b{display:block;font:600 clamp(30px,6vw,48px)/1.2 Prompt;color:var(--deep)}.stat span{font-size:14px;color:var(--soft)}
+.mq{overflow:hidden;margin-top:26px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.mq div{display:flex;gap:12px;width:max-content;animation:mq 45s linear infinite}.mq:hover div{animation-play-state:paused}
+.mq span{font:500 14px Prompt;padding:8px 16px;border-radius:99px;background:var(--glass);border:1px solid var(--line);color:var(--deep);white-space:nowrap}
+@keyframes mq{to{transform:translateX(-50%)}}
+.tab:active{transform:scale(.94)}
+.go{position:relative;overflow:hidden}.go::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);transition:left .6s}.go:hover::after{left:130%}
+dialog{border:0;border-radius:26px;padding:32px 26px 26px;width:min(92vw,380px);text-align:center;background:rgba(255,255,255,.82);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);color:var(--ink);box-shadow:0 30px 80px -20px rgba(74,36,148,.6);animation:pop .4s cubic-bezier(.2,.9,.3,1.2)}
+dialog::backdrop{background:rgba(42,26,77,.35);backdrop-filter:blur(6px)}
+@keyframes pop{from{opacity:0;transform:scale(.85) translateY(20px)}}
+.avatar.big{width:150px;height:150px;font-size:52px}
+.x{position:absolute;top:10px;right:16px;border:0;background:none;font-size:28px;color:var(--soft);cursor:pointer}
+dialog h3{font-size:20px;font-weight:500}dialog .pos{min-height:0}
+@media(max-width:560px){.stat{padding:12px 6px}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.blob,.mq div,.hero-t h2,dialog{animation:none}}
+@media(prefers-reduced-motion:reduce){.poster{animation:none;opacity:1;transform:none}#cgrid.swap{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="prog"></div><div id="glow"></div><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i>
+
+<header>
+  <div class="bar">
+    <div class="crests">
+      <div class="crest"><img src="assets/school-logo.png" alt="ตราโรงเรียน" onerror="this.replaceWith('ตรา รร.')"></div>
+      <div class="crest"><img src="assets/council-logo.png" alt="ตราสภานักเรียน" onerror="this.replaceWith('ตราสภา')"></div>
+    </div>
+    <div class="brand">
+      <h1>คณะกรรมการสภานักเรียนโรงเรียนชัยนาทพิทยาคม</h1>
+      <p>Chainat Pittayakhom School Student Council Committee</p>
+    </div>
+    <nav aria-label="เมนูหลัก">
+      <a href="#exec">สภานักเรียน</a><a href="#committee">คณะกรรมการ</a><a href="#works">ผลงาน</a><a href="#report">แจ้งเรื่อง</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="hero" aria-label="โปสเตอร์สภานักเรียน">
+  <div class="hero-t"><h2>Student Council</h2><p id="type"></p></div>
+  <div class="posters" id="posters"></div>
+  <div class="stats">
+    <div class="stat"><b data-n="13">0</b><span>ตำแหน่งสภานักเรียน</span></div>
+    <div class="stat"><b data-n="9">0</b><span>ฝ่ายคณะกรรมการ</span></div>
+    <div class="stat"><b data-n="4">0</b><span>ประเภทเรื่องที่รับแจ้ง</span></div>
+  </div>
+  <div class="mq" aria-hidden="true"><div id="mq"></div></div>
+</section>
+
+<section id="exec">
+  <div class="sh"><h2>รายชื่อสภานักเรียน</h2><p>ผู้บริหารสภานักเรียนทั้ง 13 ตำแหน่ง</p></div>
+  <div class="grid" id="egrid"></div>
+</section>
+
+<section id="committee">
+  <div class="sh"><h2>คณะกรรมการ 9 ฝ่าย</h2><p>เลือกฝ่ายเพื่อดูรายชื่อสมาชิก</p></div>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div class="grid" id="cgrid"></div>
+</section>
+
+<section id="works">
+  <div class="sh"><h2>ผลงานและประชาสัมพันธ์</h2><p>กิจกรรมและข่าวสารล่าสุดจากสภานักเรียน</p></div>
+  <div class="grid" id="wgrid"></div>
+</section>
+
+<section id="report">
+  <div class="sh"><h2>รายงานปัญหาและรับเรื่องร้องทุกข์</h2><p>แจ้งได้ทุกเรื่อง สภานักเรียนจะส่งต่อให้ฝ่ายที่รับผิดชอบ</p></div>
+  <form id="form">
+    <label>ประเภท
+      <select name="type" required>
+        <option value="">เลือกประเภท</option>
+        <option>รายงานปัญหา</option><option>แจ้งซ่อม</option><option>ร้องทุกข์</option><option>ข้อเสนอแนะ</option>
+      </select>
+    </label>
+    <label>ชื่อเรื่องหรือแจ้งซ่อม<input name="title" required maxlength="120" placeholder="เช่น พัดลมห้องเรียนชำรุด"></label>
+    <label>รายงานปัญหา<textarea name="detail" required maxlength="1000" placeholder="อธิบายปัญหาให้ละเอียด"></textarea></label>
+    <label>ห้องเรียน<input name="room" required maxlength="30" placeholder="เช่น ม.5/3"></label>
+    <button class="go" id="send" type="submit">ส่งเรื่อง</button>
+    <p id="msg" role="status"></p>
+  </form>
+</section>
+</main>
+
+<footer>
+  <p>© คณะกรรมการสภานักเรียน โรงเรียนชัยนาทพิทยาคม</p>
+  <p>จัดทำและพัฒนาระบบโดยทีมสภานักเรียน ปีการศึกษา 2569</p>
+  <p>ผู้ออกแบบและพัฒนาเว็บไซต์ นายฐนิต พุ่มพุทรา หัวหน้าฝ่ายวิชาการและประเมินผล</p>
+</footer>
+
+<dialog id="dlg" aria-label="ข้อมูลสมาชิก"></dialog>
+
+<script>
+/* ===== ตั้งค่า ===== */
+// วาง URL ของ Google Apps Script (Web app) ตรงนี้ ถ้าเว้นว่างจะแสดงข้อมูลตัวอย่าง
+const API_URL = "";
+// รูปโปสเตอร์ 3 ใบ ใส่พาธหรือลิงก์รูปได้ เช่น "assets/poster1.jpg"
+const POSTERS = ["", "", ""];
+
+const EXEC_POS = ["ประธานสภานักเรียน","รองประธานสภานักเรียน 1","รองประธานสภานักเรียน 2","ฝ่ายประชาสัมพันธ์และภาพลักษณ์องค์กร","ฝ่ายวิชาการและการประเมิน","ฝ่ายโสตทัศนูปกรณ์และเทคโนโลยีสารสนเทศ","ฝ่ายกิจกรรมและนันทนาการ","ฝ่ายอาคารสถานที่และสิ่งแวดล้อม","ฝ่ายพิธีการและศาสนพิธี","ฝ่ายงบประมาณและพัสดุ","ฝ่ายกิจการนักเรียนและรับเรื่องร้องทุกข์","ฝ่ายปฏิคมและสวัสดิการ","เลขานุการ"];
+const DEPTS = EXEC_POS.slice(3, 12);
+
+/* ===== ตัวช่วย ===== */
+const store = [];
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function img(u){ // รองรับลิงก์แชร์ของ Google Drive
+  u = String(u || "").trim(); if (!u) return "";
+  const m = u.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?id=)([\w-]+)/);
+  return m ? `https://drive.google.com/thumbnail?id=${m[1]}&sz=w600` : u;
+}
+async function load(sheet){
+  if (!API_URL) return null;
+  try { const r = await fetch(`${API_URL}?sheet=${sheet}`); return await r.json(); } catch { return null; }
+}
+function person(p, lead){
+  const photo = img(p.photo), name = p.name || "ชื่อ-นามสกุล";
+  const ct = String(p.contact || "");
+  const link = /^https?:\/\//.test(ct) ? `<a href="${esc(ct)}" target="_blank" rel="noopener">ช่องทางติดต่อ</a>` : esc(ct || "ช่องทางการติดต่อ");
+  return `<article class="card rv tilt${lead ? " lead" : ""}" data-k="${store.push(p) - 1}" tabindex="0">
+    <div class="avatar">${photo ? `<img src="${esc(photo)}" alt="${esc(name)}" loading="lazy">` : esc(name.trim()[0] || "?")}</div>
+    <h3>${esc(name)}</h3><div class="cls">${esc(p.class || "ชั้น")}</div>
+    <div class="pos">${esc(p.position)}</div><div class="ct">${link}</div></article>`;
+}
+
+/* ===== โปสเตอร์ ===== */
+const grads = ["#7d4fdc,#c9a0f0","#5a2fb0,#a98af0","#8f5fe0,#e0b6ee"];
+$("#posters").innerHTML = POSTERS.map((s, i) => `<div class="poster"><div class="pin tilt">${s
+  ? `<img src="${esc(s)}" alt="โปสเตอร์สภานักเรียน ${i + 1}">`
+  : `<div class="ph" style="background:linear-gradient(150deg,${grads[i]})"><div>โปสเตอร์ ${i + 1}<small>ใส่รูปจริงในตัวแปร POSTERS</small></div></div>`}</div></div>`).join("");
+
+/* ===== สภานักเรียน 13 คน ===== */
+async function initExec(){
+  const rows = await load("Executives");
+  const list = EXEC_POS.map((pos, i) => Object.assign({ position: pos }, rows && rows[i] ? rows[i] : {}, { position: pos }));
+  $("#egrid").innerHTML = list.map((p, i) => person(p, i < 3)).join("");
+}
+
+/* ===== คณะกรรมการ 9 ฝ่าย ===== */
+let committee = null, current = DEPTS[0];
+function showDept(d){
+  current = d;
+  document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.d === d));
+  let rows = committee ? committee.filter(r => r.dept === d) : [{ position: "หัวหน้าฝ่าย" }, { position: "รองหัวหน้าฝ่าย" }, { position: "กรรมการ" }];
+  const g = $("#cgrid");
+  g.innerHTML = rows.length ? rows.map(r => person(r)).join("") : `<p class="empty">ยังไม่มีรายชื่อของฝ่ายนี้</p>`;
+  g.classList.remove("swap"); void g.offsetWidth; g.classList.add("swap");
+}
+async function initCommittee(){
+  $("#tabs").innerHTML = DEPTS.map(d => `<button class="tab" role="tab" data-d="${esc(d)}">${esc(d)}</button>`).join("");
+  $("#tabs").onclick = e => { const b = e.target.closest(".tab"); if (b) showDept(b.dataset.d); };
+  committee = await load("Committee");
+  showDept(current);
+}
+
+/* ===== ผลงาน ===== */
+async function initWorks(){
+  let rows = await load("Works");
+  if (!rows || !rows.length) rows = [1, 2, 3].map(n => ({ title: `ชื่อผลงาน ${n}`, date: "", desc: "คำอธิบายผลงานหรือข่าวประชาสัมพันธ์", tag: "กิจกรรม" }));
+  $("#wgrid").innerHTML = rows.map(w => {
+    const d = w.date ? new Date(w.date) : null;
+    const ds = d && !isNaN(d) ? d.toLocaleDateString("th-TH", { dateStyle: "long" }) : "";
+    return `<article class="wcard rv tilt"><div class="wimg">${w.image ? `<img src="${esc(img(w.image))}" alt="" loading="lazy">` : ""}</div>
+      <div class="wb"><span class="tag">${esc(w.tag || "ประชาสัมพันธ์")}</span><h3>${esc(w.title)}</h3>
+      <p>${esc(w.desc)}</p>${ds ? `<time>${ds}</time>` : ""}</div></article>`;
+  }).join("");
+}
+
+/* ===== ฟอร์มร้องทุกข์ ===== */
+$("#form").addEventListener("submit", async e => {
+  e.preventDefault();
+  const f = e.target, m = $("#msg"), b = $("#send");
+  if (!API_URL){ m.className = "err"; m.textContent = "ยังไม่ได้เชื่อมต่อระบบ กรุณาตั้งค่า API_URL ในไฟล์ index.html"; return; }
+  b.disabled = true; m.className = ""; m.textContent = "กำลังส่ง…";
+  try {
+    await fetch(API_URL, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(Object.fromEntries(new FormData(f))) });
+    m.className = "ok"; m.textContent = "ส่งเรื่องเรียบร้อยแล้ว สภานักเรียนจะติดตามให้"; f.reset(); confetti();
+  } catch { m.className = "err"; m.textContent = "ส่งไม่สำเร็จ กรุณาตรวจสอบอินเทอร์เน็ตแล้วลองใหม่"; }
+  b.disabled = false;
+});
+
+/* ===== ลูกเล่น ===== */
+const rm = matchMedia("(prefers-reduced-motion:reduce)").matches;
+const hd = document.querySelector("header");
+addEventListener("scroll", () => {
+  const h = document.documentElement;
+  $("#prog").style.width = scrollY / (h.scrollHeight - innerHeight) * 100 + "%";
+  hd.classList.toggle("small", scrollY > 40);
+}, { passive: true });
+
+// เลื่อนถึงแล้วค่อยๆ โผล่ทีละใบ
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const t = e.target; io.unobserve(t);
+  t.style.transitionDelay = t._i * 80 + "ms"; t.classList.add("in");
+  setTimeout(() => { t.style.transitionDelay = ""; t.classList.add("done"); }, 1000);
+}), { threshold: .1 });
+function watch(){ document.querySelectorAll(".rv:not(.w)").forEach((t, i) => { t.classList.add("w"); t._i = i % 6; io.observe(t); }); }
+document.querySelectorAll(".sh").forEach(e => e.classList.add("rv"));
+new MutationObserver(watch).observe($("main"), { childList: true, subtree: true }); watch();
+
+// เมนูไฮไลต์ตามหัวข้อที่กำลังดู
+const so = new IntersectionObserver(es => es.forEach(e => e.isIntersecting &&
+  document.querySelectorAll("nav a").forEach(a => a.classList.toggle("on", a.hash === "#" + e.target.id))), { rootMargin: "-45% 0px -50% 0px" });
+document.querySelectorAll("section[id]").forEach(x => so.observe(x));
+
+// ตัวเลขนับขึ้น
+const co = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return; co.unobserve(e.target);
+  const to = +e.target.dataset.n; let s = null;
+  const f = t => { s ??= t; const p = Math.min((t - s) / 1200, 1); e.target.textContent = Math.round(to * (1 - (1 - p) ** 3)); if (p < 1) requestAnimationFrame(f); };
+  requestAnimationFrame(f);
+}));
+document.querySelectorAll("[data-n]").forEach(x => co.observe(x));
+
+// แถบชื่อฝ่ายเลื่อนวน
+$("#mq").innerHTML = [...DEPTS, ...DEPTS].map(d => `<span>${esc(d)}</span>`).join("");
+
+// ข้อความพิมพ์ทีละตัว (แก้ประโยคได้ที่นี่)
+const ph = ["เสียงของนักเรียนทุกคน", "ร่วมกันพัฒนาโรงเรียน", "แจ้งปัญหาได้ทุกเรื่อง"], ty = $("#type");
+let pi = 0, ci = 0, del = false;
+(function tick(){
+  if (rm){ ty.textContent = ph[0]; return; }
+  const w = ph[pi]; ty.textContent = w.slice(0, ci);
+  if (!del && ci === w.length){ del = true; return setTimeout(tick, 1600); }
+  if (del && ci === 0){ del = false; pi = (pi + 1) % ph.length; }
+  ci += del ? -1 : 1; setTimeout(tick, del ? 35 : 80);
+})();
+
+// เอียง 3 มิติ + แสงตามเมาส์
+let last;
+document.addEventListener("pointermove", e => {
+  const g = $("#glow"); g.style.left = e.clientX + "px"; g.style.top = e.clientY + "px";
+  const t = e.target.closest && e.target.closest(".tilt");
+  if (last && last !== t) last.style.transform = "";
+  last = t;
+  if (!t || rm || e.pointerType === "touch") return;
+  const r = t.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+  t.style.transform = `perspective(700px) rotateX(${(.5 - y) * 10}deg) rotateY(${(x - .5) * 12}deg) translateY(-4px)`;
+  t.style.setProperty("--mx", x * 100 + "%"); t.style.setProperty("--my", y * 100 + "%");
+});
+
+// คลิกการ์ดเพื่อดูรายละเอียด
+const dlg = $("#dlg");
+function openCard(k){
+  const p = store[k], ph = img(p.photo), n = p.name || "ชื่อ-นามสกุล", c = String(p.contact || "");
+  dlg.innerHTML = `<button class="x" aria-label="ปิด" onclick="dlg.close()">×</button>
+    <div class="avatar big">${ph ? `<img src="${esc(ph)}" alt="${esc(n)}">` : esc(n.trim()[0] || "?")}</div>
+    <h3>${esc(n)}</h3><div class="cls">${esc(p.class || "ชั้น")}</div><div class="pos">${esc(p.position)}</div>
+    <div class="ct">${/^https?:\/\//.test(c) ? `<a href="${esc(c)}" target="_blank" rel="noopener">ช่องทางติดต่อ</a>` : esc(c || "ช่องทางการติดต่อ")}</div>`;
+  dlg.showModal();
+}
+document.addEventListener("click", e => { const c = e.target.closest(".card[data-k]"); if (c && !e.target.closest("a")) openCard(c.dataset.k); });
+document.addEventListener("keydown", e => { if (e.key === "Enter" && e.target.matches(".card[data-k]")) openCard(e.target.dataset.k); });
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+
+// ส่งเรื่องสำเร็จ ปล่อยกระดาษสี
+function confetti(){
+  if (rm) return;
+  const c = ["#7d4fdc", "#b8923a", "#e4c9f2", "#a98af0"];
+  for (let i = 0; i < 44; i++){
+    const s = document.createElement("i");
+    Object.assign(s.style, { position: "fixed", left: "50%", top: "62%", width: "9px", height: "14px", background: c[i % 4], borderRadius: "2px", zIndex: 99, pointerEvents: "none" });
+    document.body.append(s);
+    const a = Math.random() * 6.28, d = 150 + Math.random() * 260;
+    s.animate([{ transform: "none", opacity: 1 }, { transform: `translate(${Math.cos(a) * d}px,${Math.sin(a) * d - 120}px) rotate(${Math.random() * 720}deg)`, opacity: 0 }],
+      { duration: 1200 + Math.random() * 600, easing: "cubic-bezier(.2,.7,.3,1)" }).onfinish = () => s.remove();
+  }
+}
+
+initExec(); initCommittee(); initWorks();
+</script>
+</body>
+</html>
