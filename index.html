@@ -136,7 +136,7 @@ dialog h3{font-size:20px;font-weight:500}dialog .pos{min-height:0}
 [hidden]{display:none!important}
 .search{position:relative;max-width:520px;margin-bottom:22px}
 .search input{padding:14px 18px 14px 48px;border-radius:99px;background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.85);box-shadow:0 10px 30px -18px rgba(74,36,148,.5);transition:box-shadow .3s}
-.search input:focus{box-shadow:0 0 0 4px rgba(109,63,201,.22)}
+.search input:focus{box-shadow:0 0 0 4px rgba(var(--rgb),.22)}
 .search svg{position:absolute;left:18px;top:14px;width:20px;height:20px;color:var(--pri);pointer-events:none}
 #qc{display:block;font-size:14px;color:var(--soft);margin:8px 0 0 8px;min-height:22px}
 .tab{min-height:44px}
@@ -160,27 +160,27 @@ footer{padding-bottom:max(28px,env(safe-area-inset-bottom))}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.blob,.mq div,.hero-t h2,dialog{animation:none}}
 @media(prefers-reduced-motion:reduce){.poster{animation:none;opacity:1;transform:none}#cgrid.swap{animation:none}html{scroll-behavior:auto}}
 /* ===== โทนใหม่: พื้นสว่างนุ่ม ตัวอักษรเข้ม ม่วงเป็นสีเน้น ===== */
-:root{--ink:#15131f;--soft:#6a6878;--pri:#5b46e0;--deep:#15131f;--gold:#b08a3e;--glass:rgba(255,255,255,.72);--line:rgba(21,19,31,.09);--bg:#f6f6fa}
+:root{--ink:#15131f;--soft:#6a6878;--pri:#2563eb;--pri-d:#1d4ed8;--pri-l:#3b82f6;--rgb:37,99,235;--tint:#d6e4fb;--tint2:#c3d7fb;--tint3:#dbe8fd;--deep:#15131f;--gold:#b08a3e;--glass:rgba(255,255,255,.72);--line:rgba(21,19,31,.09);--bg:#f6f6fa}
 body::before{background:none}
-.blob{opacity:.5}.b1{background:#cfc6f7}.b2{background:#ffd9c7}.b3{background:#bfe6ef}
-#glow{background:radial-gradient(circle,rgba(91,70,224,.16),transparent 65%)}
+.blob{opacity:.5}.b1{background:var(--tint2)}.b2{background:#ffd9c7}.b3{background:#bfe6ef}
+#glow{background:radial-gradient(circle,rgba(var(--rgb),.16),transparent 65%)}
 header{top:10px;width:calc(100% - 24px);max-width:1240px;margin:10px auto 0;border-radius:26px;border:1px solid var(--line);box-shadow:0 8px 30px -18px rgba(21,19,31,.35)}
 nav a:hover{background:rgba(21,19,31,.06)}nav a.on{background:var(--ink);color:#fff}
-.hero-t h2{letter-spacing:-.03em;background:linear-gradient(100deg,#15131f 25%,#5b46e0 50%,#15131f 75%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text}
+.hero-t h2{letter-spacing:-.03em;background:linear-gradient(100deg,#15131f 25%,var(--pri) 50%,#15131f 75%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text}
 .poster{border-radius:28px;border-color:#fff;box-shadow:0 30px 60px -28px rgba(21,19,31,.55)}
 .card,.wcard,.stat{border:1px solid var(--line);background:rgba(255,255,255,.8);box-shadow:0 1px 2px rgba(21,19,31,.05),0 14px 34px -18px rgba(21,19,31,.2)}
 .card,.wcard{border-radius:24px}.stat{border-radius:24px}
 .card:hover{box-shadow:0 28px 50px -22px rgba(21,19,31,.35)}
-.card.lead{background:var(--ink);border-color:var(--ink);color:#fff}
-.card.lead .cls{color:#b9b6cc}.card.lead .pos{color:#e6c886}.card.lead .ct,.card.lead .ct a{color:#dcd8f0}
-.card.lead .avatar{border-color:#2f2c47}
-.avatar{background:linear-gradient(135deg,#dcd6f7,#f6dccf);color:var(--ink);border-color:#fff}
+.card.lead{background:linear-gradient(155deg,var(--pri-l),var(--pri-d));border-color:transparent;color:#fff;box-shadow:0 18px 40px -18px rgba(var(--rgb),.7)}
+.card.lead .cls{color:rgba(255,255,255,.82)}.card.lead .pos{color:#fff0c2}.card.lead .ct,.card.lead .ct a{color:#fff}
+.card.lead .avatar{border-color:rgba(255,255,255,.7)}
+.avatar{background:linear-gradient(135deg,var(--tint),#f6dccf);color:var(--ink);border-color:#fff}
 .stat:nth-child(2){background:var(--pri);border-color:var(--pri);color:#fff}
 .stat:nth-child(2) b,.stat:nth-child(2) span{color:#fff}
 .tab{background:rgba(255,255,255,.8)}.tab[aria-selected=true]{background:var(--ink);border-color:var(--ink)}
-.tag{background:rgba(91,70,224,.1);color:#4a37c4}
-.wimg{background:linear-gradient(135deg,#e4defa,#fde3d3)}
-button.go{background:linear-gradient(135deg,#6a55ee,#4a37c4);box-shadow:0 12px 26px -12px rgba(74,55,196,.8)}
+.tag{background:rgba(var(--rgb),.1);color:var(--pri-d)}
+.wimg{background:linear-gradient(135deg,var(--tint3),#fde3d3)}
+button.go{background:linear-gradient(135deg,var(--pri-l),var(--pri-d));box-shadow:0 12px 26px -12px rgba(var(--rgb),.7)}
 .search input{box-shadow:0 10px 30px -20px rgba(21,19,31,.4)}
 form{border-radius:28px;background:rgba(255,255,255,.8);border-color:var(--line)}
 dialog{box-shadow:0 30px 80px -20px rgba(21,19,31,.5)}dialog::backdrop{background:rgba(21,19,31,.4)}
@@ -215,6 +215,13 @@ footer{background:var(--ink);color:#e9e7f3}footer p+p{color:#9d9ab0}
  dialog::before{content:"";position:absolute;top:10px;left:50%;width:40px;height:4px;margin-left:-20px;border-radius:4px;background:rgba(21,19,31,.18)}
 }
 @keyframes sheet{from{transform:translateY(100%)}}
+/* ===== โปสเตอร์แนวนอน 16:9 ===== */
+.poster{aspect-ratio:16/9}
+@media(min-width:701px){
+ .posters{grid-template-columns:2fr 1fr}
+ .poster:nth-child(1){grid-row:span 2;aspect-ratio:auto}
+}
+@media(max-width:700px){.posters{grid-auto-columns:88%}}
 </style>
 </head>
 <body>
@@ -311,9 +318,22 @@ footer{background:var(--ink);color:#e9e7f3}footer p+p{color:#9d9ab0}
 // วาง URL ของ Google Apps Script (Web app) ตรงนี้ ถ้าเว้นว่างจะแสดงข้อมูลตัวอย่าง
 const API_URL = "https://script.google.com/macros/s/AKfycbwmCUakL_OzhPslk3IrEVERp4vX9xpGcvZjr3Kc8zhskTgqfQovSvO9CjfpMp0l2RgvGQ/exec";
 // รูปโปสเตอร์ 3 ใบ ใส่พาธหรือลิงก์รูปได้ เช่น "assets/poster1.jpg"
-const POSTERS = ["", "", ""];
+const POSTERS = ["https://drive.google.com/file/d/1vejO32rx08AMwgKe-ytcw0NXS94RKMQz/view?usp=drive_link", "https://drive.google.com/file/d/1F7DZ4SAsEyT9Dvlt8mB4tyvJwUMmJPLP/view?usp=drive_link", "https://drive.google.com/file/d/1Efy7GL3FYtizszUpmoi4kV-UQf4tLOaM/view?usp=drive_link"];
 // ตราจาก Google Drive: วางลิงก์แชร์ของรูป [ตราโรงเรียน, ตราสภา] ถ้าเว้นว่างจะใช้ไฟล์ในโฟลเดอร์ assets
-const LOGOS = ["https://drive.google.com/file/d/1gS4TBVvwONWIDzycC-YjYlxo3RWor0Zq/view?usp=drive_link", "https://drive.google.com/file/d/1wEF90yDBwSvABSBbLlafWcvVdT2a4YA5/view?usp=drive_link"];
+const LOGOS = ["", "https://drive.google.com/file/d/1wEF90yDBwSvABSBbLlafWcvVdT2a4YA5/view?usp=drive_link"];
+
+// เลือกโทนสีหลัก: "blue" | "emerald" | "rose" | "violet" | "gold"
+const THEME = "blue";
+const THEMES = {
+  blue:    { pri:"#2563eb", d:"#1d4ed8", l:"#3b82f6", rgb:"37,99,235",  t1:"#d6e4fb", t2:"#c3d7fb", t3:"#dbe8fd", g:["#101a33,#2563eb","#162238,#6ea0f5","#1f2a3a,#d9a86c"] },
+  emerald: { pri:"#0d8a6a", d:"#0a6f56", l:"#14a37f", rgb:"13,138,106", t1:"#cdeee3", t2:"#bfe8da", t3:"#d5f2e8", g:["#0f2a25,#0d8a6a","#15302b,#5cd0ae","#1f2d2a,#d9a86c"] },
+  rose:    { pri:"#d63a72", d:"#b52b5c", l:"#e8548a", rgb:"214,58,114", t1:"#f8d7e3", t2:"#f6c9da", t3:"#fbdde8", g:["#2e1622,#d63a72","#361a29,#f08cb0","#2f2226,#d9a86c"] },
+  violet:  { pri:"#5b46e0", d:"#4a37c4", l:"#6a55ee", rgb:"91,70,224",  t1:"#dcd6f7", t2:"#cfc6f7", t3:"#e4defa", g:["#1c1930,#5b46e0","#26243a,#8f83ee","#2d2438,#d9a86c"] },
+  gold:    { pri:"#a8691a", d:"#8a5410", l:"#c07e26", rgb:"168,105,26", t1:"#f3e2c4", t2:"#efd8ae", t3:"#f6e8cf", g:["#2a2010,#c98a26","#332714,#e6b862","#211d2e,#6b5bd0"] }
+};
+const T = THEMES[THEME] || THEMES.blue;
+[["--pri",T.pri],["--pri-d",T.d],["--pri-l",T.l],["--rgb",T.rgb],["--tint",T.t1],["--tint2",T.t2],["--tint3",T.t3]]
+  .forEach(([k, v]) => document.documentElement.style.setProperty(k, v));
 
 const EXEC_POS = ["ประธานสภานักเรียน","รองประธานสภานักเรียน 1","รองประธานสภานักเรียน 2","ฝ่ายประชาสัมพันธ์และภาพลักษณ์องค์กร","ฝ่ายวิชาการและการประเมิน","ฝ่ายโสตทัศนูปกรณ์และเทคโนโลยีสารสนเทศ","ฝ่ายกิจกรรมและนันทนาการ","ฝ่ายอาคารสถานที่และสิ่งแวดล้อม","ฝ่ายพิธีการและศาสนพิธี","ฝ่ายงบประมาณและพัสดุ","ฝ่ายกิจการนักเรียนและรับเรื่องร้องทุกข์","ฝ่ายปฏิคมและสวัสดิการ","เลขานุการ"];
 const DEPTS = EXEC_POS.slice(3, 12);
@@ -342,10 +362,10 @@ function person(p, lead){
 }
 
 /* ===== โปสเตอร์ ===== */
-const grads = ["#1c1930,#5b46e0","#26243a,#8f83ee","#2d2438,#d9a86c"];
+const grads = T.g;
 $("#posters").innerHTML = POSTERS.map((s, i) => `<div class="poster"><div class="pin tilt">${s
   ? `<img src="${esc(s)}" alt="โปสเตอร์สภานักเรียน ${i + 1}">`
-  : `<div class="ph" style="background:linear-gradient(150deg,${grads[i]})"><div>โปสเตอร์ ${i + 1}<small>ใส่รูปจริงในตัวแปร POSTERS</small></div></div>`}</div></div>`).join("");
+  : `<div class="ph" style="background:linear-gradient(150deg,${grads[i]})"><div>โปสเตอร์ ${i + 1}<small>ภาพแนวนอน 16:9 ใส่ในตัวแปร POSTERS</small></div></div>`}</div></div>`).join("");
 
 /* ===== สภานักเรียน 13 คน ===== */
 async function initExec(){
