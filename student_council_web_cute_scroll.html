@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>คณะกรรมการสภานักเรียน โรงเรียนชัยนาทพิทยาคม</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&family=Sarabun:wght@400;500&display=swap" rel="stylesheet">
+<style>:root{
+ --ink:#26364a;--muted:#718096;--pri:#4f7cff;--pri2:#7b61ff;--mint:#55c7b0;--yellow:#ffd66b;--pink:#ff9fba;--paper:#fffdf8;--bg:#f7f9fc;--line:#e7edf5;--shadow:0 16px 45px rgba(52,72,105,.10)
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{font-family:Sarabun,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;min-height:100vh;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradient(180deg,#f9fbff 0%,#f7f8fc 48%,#fffaf7 100%)}
+body::after{content:"";position:fixed;width:380px;height:380px;border-radius:50%;right:-160px;top:110px;background:#dce7ff;filter:blur(45px);opacity:.65;z-index:-1}
+h1,h2,h3,.pf{font-family:Prompt,sans-serif}a{color:inherit}:focus-visible{outline:3px solid #8ba9ff;outline-offset:3px}
+#prog{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--pri),var(--mint),var(--yellow));z-index:100}
+#glow,.blob{display:none}
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.90);border-bottom:1px solid var(--line);box-shadow:0 5px 20px rgba(43,61,90,.05)}
+.bar{max-width:1180px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:12px}
+.crests{display:flex;gap:7px;flex:none}.crest{width:44px;height:44px;border-radius:14px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;overflow:hidden;font:600 10px Prompt;color:var(--muted);text-align:center;box-shadow:0 5px 15px rgba(52,72,105,.07)}.crest img{width:100%;height:100%;object-fit:contain}
+.brand{min-width:0}.brand h1{font-size:clamp(15px,2.1vw,20px);font-weight:700;line-height:1.25;color:#24385b}.brand p{font-size:12px;color:var(--muted)}
+nav{margin-left:auto;display:flex;align-items:center;gap:3px}nav a{position:relative;text-decoration:none;font:500 13px Prompt;padding:8px 11px;border-radius:12px;color:#53627a;transition:.2s}nav a:hover,nav a.on{background:#eef3ff;color:#315ed8}
+.council-nav-btn{font:500 13px Prompt;padding:8px 12px;border:1px dashed #b8c7e8;background:#f7faff;color:#45608f;border-radius:12px;cursor:pointer}.council-nav-btn:hover{background:#edf3ff}
+.burger{display:none;margin-left:auto;flex:none;width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:#fff;cursor:pointer;place-items:center}.burger i,.burger i::before,.burger i::after{display:block;position:relative;width:19px;height:2px;background:#41516a;border-radius:2px;transition:.25s}.burger i::before,.burger i::after{content:"";position:absolute;left:0}.burger i::before{top:-6px}.burger i::after{top:6px}.burger[aria-expanded=true] i{background:transparent}.burger[aria-expanded=true] i::before{top:0;transform:rotate(45deg)}.burger[aria-expanded=true] i::after{top:0;transform:rotate(-45deg)}
+@media(max-width:900px){.burger{display:grid}nav{position:absolute;left:12px;right:12px;top:100%;margin:7px 0 0;flex-direction:column;align-items:stretch;padding:8px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(-7px);transition:.2s}nav.open{opacity:1;visibility:visible;transform:none}nav a,.council-nav-btn{padding:13px 14px;text-align:left;font-size:15px;border-radius:12px}}
+/* general */
+main{position:relative}section{max-width:1180px;margin:auto;padding:64px 20px 12px}.sh{margin-bottom:24px}.sh h2{font-size:clamp(23px,3.4vw,32px);font-weight:700;color:#2a3c5c}.sh p{color:var(--muted);font-size:15px}.sh::after{content:"";display:block;width:48px;height:4px;border-radius:99px;background:linear-gradient(90deg,var(--pri),var(--mint));margin-top:9px}
+/* hero */
+#hero{padding-top:42px}.hero-t{text-align:left;margin-bottom:24px;padding:10px 2px}.hero-t h2{font-size:clamp(38px,8vw,76px);font-weight:700;line-height:1;background:linear-gradient(100deg,#315ed8,#765df2,#28a98e);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.04em}.hero-t p{font:500 clamp(17px,2.8vw,23px) Prompt;color:#61708a;min-height:35px;margin-top:12px}.hero-t p::after{content:"|";margin-left:2px;color:var(--pri);animation:blink 1s steps(2) infinite}@keyframes blink{50%{opacity:0}}
+.posters{display:grid;grid-template-columns:1.05fr .95fr .95fr;gap:18px}.poster{aspect-ratio:16/10;border-radius:20px;overflow:hidden;position:relative;background:#eaf0fa;border:1px solid #fff;box-shadow:var(--shadow);opacity:0;transform:translateY(-30px) rotate(-1deg);animation:drop .7s cubic-bezier(.2,.8,.2,1) forwards}.poster:nth-child(2){transform:translateY(-30px) rotate(1deg)}.poster:nth-child(3){transform:translateY(-30px) rotate(-.5deg)}.poster:nth-child(1){animation-delay:.15s}.poster:nth-child(2){animation-delay:.35s}.poster:nth-child(3){animation-delay:.55s}@keyframes drop{to{opacity:1;transform:none}}.poster img{width:100%;height:100%;object-fit:cover;display:block}.poster::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,35,65,.12));pointer-events:none}.ph{width:100%;height:100%;display:grid;place-items:center;text-align:center;padding:20px;color:#fff;font:600 18px Prompt;background:linear-gradient(135deg,#7295ff,#69c9ba)}.ph small{display:block;font:400 13px Sarabun;opacity:.9}.dots{display:none}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:13px 16px;display:flex;align-items:baseline;gap:9px;box-shadow:0 8px 22px rgba(52,72,105,.05)}.stat b{font:700 28px Prompt;color:#315ed8}.stat span{font-size:13px;color:var(--muted)}.mq{overflow:hidden;border-top:1px dashed #d9e1ed;border-bottom:1px dashed #d9e1ed;padding:9px 0;color:#74839a;white-space:nowrap}.mq>div{display:flex;width:max-content;animation:marquee 24s linear infinite}.mq span{font:500 12px Prompt;margin-right:34px}.mq span::before{content:"✦";color:var(--mint);margin-right:9px}@keyframes marquee{to{transform:translateX(-50%)}}
+@media(max-width:700px){section{padding-top:48px}.hero-t h2{font-size:46px}.posters{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:84%;overflow-x:auto;scroll-snap-type:x mandatory;padding:3px 2px 12px}.poster{scroll-snap-align:center}.stats{grid-template-columns:1fr}.stat{justify-content:center}}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:17px;text-align:center;box-shadow:0 9px 25px rgba(52,72,105,.06);cursor:pointer;transition:.22s}.card:hover{transform:translateY(-5px);box-shadow:0 18px 35px rgba(52,72,105,.12);border-color:#d4def0}.card.lead{background:linear-gradient(145deg,#fff,#f0f5ff)}.avatar{width:96px;height:96px;border-radius:28px;margin:0 auto 12px;background:linear-gradient(135deg,#8da8ff,#6bc8b7);display:grid;place-items:center;overflow:hidden;color:#fff;font:700 31px Prompt;border:4px solid #fff;box-shadow:0 8px 20px rgba(52,72,105,.13)}.avatar img{width:100%;height:100%;object-fit:cover}.avatar.big{width:118px;height:118px;margin-bottom:14px}.card h3{font-size:16px;font-weight:600}.card .cls{color:var(--muted);font-size:14px}.card .pos{font:500 13px/1.4 Prompt;color:#5c70a0;margin:6px 0 8px;min-height:36px}.card .ct{font-size:13px;color:#50627d;word-break:break-all}.card .ct a{text-decoration:underline}
+.search{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 13px;margin:-6px 0 20px;max-width:620px;box-shadow:0 7px 20px rgba(52,72,105,.04)}.search svg{width:19px;color:#7d8da4;flex:none}.search input{border:0!important;background:transparent!important;padding:12px 4px!important;box-shadow:none!important;outline:0}.search span{font:500 12px Prompt;color:var(--muted);white-space:nowrap}.tabs{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px}.tab{font:500 13px Prompt;padding:8px 13px;border-radius:11px;border:1px solid var(--line);background:#fff;color:#56667e;cursor:pointer;transition:.2s}.tab:hover{border-color:#cbd8ee;transform:translateY(-1px)}.tab[aria-selected=true]{background:#eef3ff;color:#315ed8;border-color:#cbd9ff}.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:30px}.rv{opacity:0;transform:translateY(22px);transition:opacity .65s,transform .65s}.rv.in{opacity:1;transform:none}.rv.done{transition:transform .2s ease-out,box-shadow .25s}
+/* works */
+#wgrid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}.wcard{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 9px 25px rgba(52,72,105,.06);transition:.22s}.wcard:hover{transform:translateY(-4px);box-shadow:0 18px 35px rgba(52,72,105,.11)}.wimg{aspect-ratio:16/10;background:linear-gradient(135deg,#dbe5ff,#d8f4ed)}.wimg img{width:100%;height:100%;object-fit:cover;display:block}.wb{padding:16px}.tag{display:inline-block;font:500 11px Prompt;color:#4261a0;background:#eef3ff;padding:3px 9px;border-radius:8px}.wb h3{font-size:17px;font-weight:600;margin:8px 0 4px}.wb p{font-size:14px;color:var(--muted)}.wb time{font-size:12px;color:#8a97aa}
+/* form */
+form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(18px,4vw,30px);max-width:720px;display:grid;gap:15px;box-shadow:var(--shadow)}label{display:grid;gap:6px;font:500 14px Prompt;color:#53647d}input,select,textarea{font:16px Sarabun;padding:11px 13px;border-radius:12px;border:1px solid #dfe6f0;background:#fbfcfe;color:var(--ink);width:100%;transition:.2s}input:focus,select:focus,textarea:focus{border-color:#9cb5ff;box-shadow:0 0 0 4px #eef3ff;outline:0}textarea{min-height:120px;resize:vertical}button.go{font:600 15px Prompt;padding:12px 22px;border:0;border-radius:12px;background:#4f7cff;color:#fff;cursor:pointer;justify-self:start;box-shadow:0 9px 20px rgba(79,124,255,.22);transition:.2s}button.go:hover{transform:translateY(-2px);background:#3f6fec}button.go:disabled{opacity:.6;cursor:wait}#msg{font-size:14px;min-height:22px}#msg.ok{color:#24805c}#msg.err{color:#c13b43}
+/* footer */
+footer{margin-top:70px;background:#273754;color:#e9eef8;text-align:center;padding:30px 20px 36px;font-size:13px}footer p+p{margin-top:4px;color:#aebbd0}
+/* council */
+#councilPage{position:fixed;inset:0;z-index:80;background:#f7f9fc;overflow:auto}.council-wrap{max-width:900px;margin:auto;padding:24px 20px 50px}.council-head{display:flex;align-items:center;gap:14px;margin-bottom:28px}.council-back{border:1px solid var(--line);background:#fff;border-radius:11px;padding:9px 14px;font:500 14px Prompt;color:#52637c;cursor:pointer}.council-title{font:700 24px Prompt;color:#2a3c5c}.council-menu{display:flex;gap:10px;margin-bottom:24px}.council-menu button{border:1px solid #d7e1f2;background:#fff;border-radius:14px;padding:12px 16px;font:500 14px Prompt;color:#405a88;cursor:pointer}.council-menu button:hover{background:#eef3ff}.council-search{max-width:560px;margin-bottom:18px}.council-search input{background:#fff}.council-result{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}.council-stat{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px;text-align:center}.council-stat b{display:block;font:700 28px Prompt;color:#315ed8}.council-stat span{font-size:13px;color:var(--muted)}.council-source-note{color:#7b8799;font-size:13px;margin-top:10px}.council-error{color:#c13b43!important}.council-member-grid{margin-bottom:16px}.council-member-grid .card{grid-column:1/-1;max-width:340px;justify-self:start}@media(max-width:600px){.council-result{grid-template-columns:1fr}.council-title{font-size:20px}}
+/* dialog */
+dialog{border:0;border-radius:20px;padding:28px;max-width:430px;width:calc(100% - 32px);box-shadow:0 30px 80px rgba(27,42,70,.25);color:var(--ink)}dialog::backdrop{background:rgba(35,49,73,.35);backdrop-filter:blur(3px)}dialog .x{position:absolute;right:12px;top:10px;border:0;background:#eef2f8;color:#607089;width:32px;height:32px;border-radius:50%;font-size:22px;cursor:pointer}
+/* mobile bottom nav stays simple like a website shortcut bar */
+.bnav{display:none}
+@media(max-width:700px){.bnav{position:fixed;display:grid;grid-template-columns:repeat(5,1fr);left:10px;right:10px;bottom:10px;z-index:40;background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:17px;box-shadow:0 12px 35px rgba(38,54,74,.15);padding:6px}.bnav a,.bnav button{min-width:0;border:0;background:none;text-decoration:none;text-align:center;color:#7a879a;font:500 10px Prompt;padding:5px 2px;border-radius:11px;cursor:pointer}.bnav a.on{background:#eef3ff;color:#315ed8}.bnav svg{display:block;width:20px;height:20px;margin:0 auto 2px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.bnav a:first-child svg{fill:currentColor;stroke:none}.bnav-council{color:#5c6e8a!important}footer{padding-bottom:105px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.001ms!important;transition-duration:.001ms!important}}
+
+/* ===== ปรับเพิ่ม: เว็บน่ารักแบบเป็นกันเอง ===== */
+:root{
+  --cute-pink:#ff9fbd;
+  --cute-peach:#ffd0a8;
+  --cute-mint:#8edfd0;
+  --cute-sky:#a9c9ff;
+  --cute-cream:#fffaf1;
+}
+body{
+  background:
+    radial-gradient(circle at 8% 8%,rgba(169,201,255,.20) 0 90px,transparent 91px),
+    radial-gradient(circle at 92% 18%,rgba(255,159,189,.17) 0 80px,transparent 81px),
+    linear-gradient(180deg,#fbfdff 0%,#f8fbff 55%,#fffaf7 100%);
+}
+body::before{
+  background:
+    radial-gradient(circle at 15% 35%,rgba(142,223,208,.10) 0 110px,transparent 111px),
+    radial-gradient(circle at 88% 62%,rgba(255,208,168,.12) 0 130px,transparent 131px);
+}
+header{
+  background:rgba(255,255,255,.90)!important;
+  border-bottom:1px solid rgba(169,201,255,.35)!important;
+  box-shadow:0 8px 30px rgba(78,104,150,.08)!important;
+}
+.bar{
+  min-height:76px!important;
+}
+.crest{
+  border:3px solid #fff!important;
+  box-shadow:0 8px 20px rgba(78,104,150,.13)!important;
+}
+.brand h1{
+  letter-spacing:-.02em!important;
+}
+.brand h1::after{
+  color:var(--cute-pink);
+  font-size:.72em;
+}
+nav a{
+  border-radius:999px!important;
+  transition:transform .2s ease,background .2s ease!important;
+}
+nav a:hover{
+  background:#fff1f5!important;
+  transform:translateY(-2px);
+}
+.council-nav-btn{
+  border-radius:999px!important;
+}
+section{
+  position:relative;
+}
+#hero{
+  overflow:hidden;
+  border-radius:32px!important;
+  background:
+    radial-gradient(circle at 12% 18%,rgba(255,255,255,.9) 0 8px,transparent 9px),
+    radial-gradient(circle at 88% 28%,rgba(255,255,255,.8) 0 6px,transparent 7px),
+    linear-gradient(135deg,#edf5ff 0%,#f8f3ff 48%,#fff4ed 100%)!important;
+  border:1px solid rgba(169,201,255,.45)!important;
+  box-shadow:0 20px 55px rgba(78,104,150,.11)!important;
+}
+#hero::before{
+  position:absolute;
+  right:28px;
+  top:20px;
+  color:#ffb4c9;
+  font-size:28px;
+  transform:rotate(12deg);
+}
+#hero::after{
+  position:absolute;
+  left:28px;
+  bottom:22px;
+  color:#8edfd0;
+  font-size:30px;
+  transform:rotate(-12deg);
+}
+.hero-t h2{
+  color:#425777!important;
+}
+.hero-t p::before{
+  content:"✦ ";
+  color:var(--cute-pink);
+}
+.stat{
+  border-radius:22px!important;
+  background:rgba(255,255,255,.78)!important;
+  border:1px solid rgba(255,255,255,.9)!important;
+  box-shadow:0 10px 25px rgba(78,104,150,.07)!important;
+}
+.stat:nth-child(1){border-bottom:4px solid #a9c9ff!important}
+.stat:nth-child(2){border-bottom:4px solid #8edfd0!important}
+.stat:nth-child(3){border-bottom:4px solid #ffd0a8!important}
+.sh h2::before{
+  color:var(--cute-pink);
+  font-size:.75em;
+}
+.card,.item,.work-card,.report-card,.committee-card,.exec-card{
+  border-radius:24px!important;
+}
+.card:hover,.item:hover,.work-card:hover,.report-card:hover,.committee-card:hover,.exec-card:hover{
+  transform:translateY(-4px);
+}
+.search,input,textarea,select{
+  border-radius:18px!important;
+}
+button{
+  transition:transform .18s ease,box-shadow .18s ease!important;
+}
+button:hover{
+  transform:translateY(-2px);
+}
+footer{
+  background:#fff!important;
+  border-top:1px dashed #d8e2f1!important;
+}
+footer::before{
+  display:block;
+  color:#ffabc2;
+  letter-spacing:8px;
+  margin-bottom:8px;
+}
+@media(max-width:700px){
+  #hero{border-radius:24px!important}
+  .bar{min-height:68px!important}
+}
+
+
+/* ===== เพิ่ม: Reveal animation ตอนเลื่อน ===== */
+.reveal-profile{
+  opacity:0;
+  transform:translateY(34px) scale(.985);
+  filter:blur(2px);
+  transition:
+    opacity .65s cubic-bezier(.2,.75,.25,1),
+    transform .65s cubic-bezier(.2,.75,.25,1),
+    filter .65s ease;
+  transition-delay:var(--reveal-delay,0ms);
+}
+.reveal-profile.is-visible{
+  opacity:1;
+  transform:none;
+  filter:none;
+}
+.reveal-profile.reveal-left{
+  transform:translateX(-28px) translateY(14px) scale(.985);
+}
+.reveal-profile.reveal-right{
+  transform:translateX(28px) translateY(14px) scale(.985);
+}
+.reveal-profile.reveal-left.is-visible,
+.reveal-profile.reveal-right.is-visible{
+  transform:none;
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal-profile{
+    opacity:1!important;
+    transform:none!important;
+    filter:none!important;
+    transition:none!important;
+  }
+}
+
+</style>
+</head>
+<body>
+<div id="prog"></div><div id="glow"></div><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i>
+
+<header>
+  <div class="bar">
+    <div class="crests">
+      <div class="crest"><img src="assets/school-logo.png" alt="ตราโรงเรียน" onerror="this.replaceWith('ตรา รร.')"></div>
+      <div class="crest"><img src="assets/council-logo.png" alt="ตราสภานักเรียน" onerror="this.replaceWith('ตราสภา')"></div>
+    </div>
+    <div class="brand">
+      <h1>คณะกรรมการสภานักเรียนโรงเรียนชัยนาทพิทยาคม</h1>
+      <p>Chainat Pittayakhom School Student Council Committee</p>
+    </div>
+    <nav id="nav" aria-label="เมนูหลัก">
+      <a href="#exec">สภานักเรียน</a><a href="#committee">คณะกรรมการ</a><a href="#works">ผลงาน</a><a href="#report">แจ้งเรื่อง</a>
+      <button class="council-nav-btn" type="button" id="councilLoginBtn">🔐 เฉพาะสภานักเรียน</button>
+    </nav>
+    <button class="burger" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="nav"><i></i></button>
+  </div>
+</header>
+
+<!-- ===== เพิ่ม: หน้าสภานักเรียน ===== -->
+<div id="councilPage" hidden>
+  <div class="council-wrap">
+    <div class="council-head">
+      <button class="council-back" type="button" id="councilBack">← กลับ</button>
+      <div class="council-title">ระบบสภานักเรียน</div>
+    </div>
+
+    <div class="council-menu">
+      <button type="button" id="checkWorkBtn">1. เช็คสถานะการทำงานของตนเอง</button>
+    </div>
+
+    <div id="councilStatus" hidden>
+      <div class="sh">
+        <h2>เช็คสถานะการทำงานของตนเอง</h2>
+        <p>ค้นหาชื่อของตนเองเพื่อดูสถิติการทำงาน</p>
+      </div>
+      <div class="council-search">
+        <input id="councilNameSearch" type="search" placeholder="ค้นหาชื่อของตนเอง" autocomplete="off">
+      </div>
+      <div id="councilResult"></div>
+    </div>
+  </div>
+</div>
+
+
+<main>
+<section id="hero" aria-label="โปสเตอร์สภานักเรียน">
+  <div class="hero-t"><h2>Student Council</h2><p id="type"></p></div>
+  <div class="posters" id="posters"></div>
+  <div class="dots" id="dots" aria-hidden="true"></div>
+  <div class="stats">
+    <div class="stat"><b data-n="13">0</b><span>ตำแหน่งสภานักเรียน</span></div>
+    <div class="stat"><b data-n="9">0</b><span>ฝ่ายคณะกรรมการ</span></div>
+    <div class="stat"><b data-n="4">0</b><span>ประเภทเรื่องที่รับแจ้ง</span></div>
+  </div>
+  <div class="mq" aria-hidden="true"><div id="mq"></div></div>
+</section>
+
+<section id="exec">
+  <div class="sh"><h2>รายชื่อสภานักเรียน</h2><p>ผู้บริหารสภานักเรียนทั้ง 13 ตำแหน่ง</p></div>
+  <div class="search">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="ค้นหาชื่อ ชั้น ตำแหน่ง หรือฝ่าย" aria-label="ค้นหาสมาชิกสภานักเรียน" autocomplete="off">
+    <span id="qc" role="status"></span>
+  </div>
+  <div class="grid" id="qgrid" hidden></div>
+  <div class="grid" id="egrid"></div>
+</section>
+
+<section id="committee">
+  <div class="sh"><h2>คณะกรรมการ 9 ฝ่าย</h2><p>เลือกฝ่ายเพื่อดูรายชื่อสมาชิก</p></div>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div class="grid" id="cgrid"></div>
+</section>
+
+<section id="works">
+  <div class="sh"><h2>ผลงานและประชาสัมพันธ์</h2><p>กิจกรรมและข่าวสารล่าสุดจากสภานักเรียน</p></div>
+  <div class="grid" id="wgrid"></div>
+</section>
+
+<section id="report">
+  <div class="sh"><h2>รายงานปัญหาและรับเรื่องร้องทุกข์</h2><p>แจ้งได้ทุกเรื่อง สภานักเรียนจะส่งต่อให้ฝ่ายที่รับผิดชอบ</p></div>
+  <form id="form">
+    <label>ประเภท
+      <select name="type" required>
+        <option value="">เลือกประเภท</option>
+        <option>รายงานปัญหา</option><option>แจ้งซ่อม</option><option>ร้องทุกข์</option><option>ข้อเสนอแนะ</option>
+      </select>
+    </label>
+    <label>ชื่อเรื่องหรือแจ้งซ่อม<input name="title" required maxlength="120" placeholder="เช่น พัดลมห้องเรียนชำรุด"></label>
+    <label>รายงานปัญหา<textarea name="detail" required maxlength="1000" placeholder="อธิบายปัญหาให้ละเอียด"></textarea></label>
+    <label>ห้องเรียน<input name="room" required maxlength="30" placeholder="เช่น ม.5/3"></label>
+    <button class="go" id="send" type="submit">ส่งเรื่อง</button>
+    <p id="msg" role="status"></p>
+  </form>
+</section>
+</main>
+
+<footer>
+  <p>© คณะกรรมการสภานักเรียน โรงเรียนชัยนาทพิทยาคม</p>
+  <p>จัดทำและพัฒนาระบบโดยทีมสภานักเรียน ปีการศึกษา 2569</p>
+  <p>ผู้ออกแบบและพัฒนาเว็บไซต์ นายฐนิต พุ่มพุทรา หัวหน้าฝ่ายวิชาการและประเมินผล</p>
+</footer>
+
+<div class="bnav" role="navigation" aria-label="เมนูล่าง">
+  <a href="#hero"><svg viewBox="0 0 24 24"><path d="m3 11 9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>หน้าแรก</a>
+  <a href="#exec"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>สภา</a>
+  <a href="#committee"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>ฝ่าย</a>
+  <a href="#works"><svg viewBox="0 0 24 24"><path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg>ผลงาน</a>
+  <a href="#report"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>แจ้งเรื่อง</a>
+  <button type="button" class="bnav-council" id="councilMobileLogin" aria-label="เข้าสู่ระบบสภานักเรียน"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>เข้าสู่ระบบ</button>
+</div>
+
+<dialog id="dlg" aria-label="ข้อมูลสมาชิก"></dialog>
+
+<script>
+/* ===== ตั้งค่า ===== */
+// วาง URL ของ Google Apps Script (Web app) ตรงนี้ ถ้าเว้นว่างจะแสดงข้อมูลตัวอย่าง
+const API_URL = "https://script.google.com/macros/s/AKfycbySo_ECQATcxQy0x030rdoq_nxJt9_NDtT7s6jUn8uAodOqjJWq6xsergA9r78laEb3Ww/exec";
+// รูปโปสเตอร์ 3 ใบ ใส่พาธหรือลิงก์รูปได้ เช่น "assets/poster1.jpg"
+const POSTERS = ["poster1.png", "poster3.png", "poster2.png"];
+// ตราจาก Google Drive: วางลิงก์แชร์ของรูป [ตราโรงเรียน, ตราสภา] ถ้าเว้นว่างจะใช้ไฟล์ในโฟลเดอร์ assets
+const LOGOS = ["", "https://drive.google.com/file/d/1wEF90yDBwSvABSBbLlafWcvVdT2a4YA5/view?usp=drive_link"];
+
+// เลือกโทนสีหลัก: "blue" | "emerald" | "rose" | "violet" | "gold"
+const THEME = "blue";
+const THEMES = {
+  blue:    { pri:"#2563eb", d:"#1d4ed8", l:"#3b82f6", rgb:"37,99,235",  t1:"#d6e4fb", t2:"#c3d7fb", t3:"#dbe8fd", g:["#101a33,#2563eb","#162238,#6ea0f5","#1f2a3a,#d9a86c"] },
+  emerald: { pri:"#0d8a6a", d:"#0a6f56", l:"#14a37f", rgb:"13,138,106", t1:"#cdeee3", t2:"#bfe8da", t3:"#d5f2e8", g:["#0f2a25,#0d8a6a","#15302b,#5cd0ae","#1f2d2a,#d9a86c"] },
+  rose:    { pri:"#d63a72", d:"#b52b5c", l:"#e8548a", rgb:"214,58,114", t1:"#f8d7e3", t2:"#f6c9da", t3:"#fbdde8", g:["#2e1622,#d63a72","#361a29,#f08cb0","#2f2226,#d9a86c"] },
+  violet:  { pri:"#5b46e0", d:"#4a37c4", l:"#6a55ee", rgb:"91,70,224",  t1:"#dcd6f7", t2:"#cfc6f7", t3:"#e4defa", g:["#1c1930,#5b46e0","#26243a,#8f83ee","#2d2438,#d9a86c"] },
+  gold:    { pri:"#a8691a", d:"#8a5410", l:"#c07e26", rgb:"168,105,26", t1:"#f3e2c4", t2:"#efd8ae", t3:"#f6e8cf", g:["#2a2010,#c98a26","#332714,#e6b862","#211d2e,#6b5bd0"] }
+};
+const T = THEMES[THEME] || THEMES.blue;
+[["--pri",T.pri],["--pri-d",T.d],["--pri-l",T.l],["--rgb",T.rgb],["--tint",T.t1],["--tint2",T.t2],["--tint3",T.t3]]
+  .forEach(([k, v]) => document.documentElement.style.setProperty(k, v));
+
+const EXEC_POS = ["ประธานสภานักเรียน","รองประธานสภานักเรียน 1","รองประธานสภานักเรียน 2","ฝ่ายประชาสัมพันธ์และภาพลักษณ์องค์กร","ฝ่ายวิชาการและการประเมิน","ฝ่ายโสตทัศนูปกรณ์และเทคโนโลยีสารสนเทศ","ฝ่ายกิจกรรมและนันทนาการ","ฝ่ายอาคารสถานที่และสิ่งแวดล้อม","ฝ่ายพิธีการและศาสนพิธี","ฝ่ายงบประมาณและพัสดุ","ฝ่ายกิจการนักเรียนและรับเรื่องร้องทุกข์","ฝ่ายปฏิคมและสวัสดิการ","เลขานุการ"];
+const DEPTS = EXEC_POS.slice(3, 12);
+
+/* ===== ตัวช่วย ===== */
+const store = [], ALL = [];
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function img(u){ // รองรับลิงก์แชร์ของ Google Drive
+  u = String(u || "").trim(); if (!u) return "";
+  const m = u.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?id=)([\w-]+)/);
+  return m ? `https://drive.google.com/thumbnail?id=${m[1]}&sz=w600` : u;
+}
+async function load(sheet){
+  if (!API_URL) return null;
+  try { const r = await fetch(`${API_URL}?sheet=${sheet}`); return await r.json(); } catch { return null; }
+}
+function person(p, lead){
+  const photo = img(p.photo), name = p.name || "ชื่อ-นามสกุล";
+  const ct = String(p.contact || "");
+  const link = /^https?:\/\//.test(ct) ? `<a href="${esc(ct)}" target="_blank" rel="noopener">ช่องทางติดต่อ</a>` : esc(ct || "ช่องทางการติดต่อ");
+  return `<article class="card rv tilt${lead ? " lead" : ""}" data-k="${store.push(p) - 1}" tabindex="0">
+    <div class="avatar">${photo ? `<img src="${esc(photo)}" alt="${esc(name)}" loading="lazy">` : esc(name.trim()[0] || "?")}</div>
+    <h3>${esc(name)}</h3><div class="cls">${esc(p.class || "ชั้น")}</div>
+    <div class="pos">${esc(p.position)}</div><div class="ct">${link}</div></article>`;
+}
+
+/* ===== โปสเตอร์ ===== */
+const grads = T.g;
+$("#posters").innerHTML = POSTERS.map((s, i) => `<div class="poster"><div class="pin tilt">${s
+  ? `<img src="${esc(s)}" alt="โปสเตอร์สภานักเรียน ${i + 1}">`
+  : `<div class="ph" style="background:linear-gradient(150deg,${grads[i]})"><div>โปสเตอร์ ${i + 1}<small>ภาพแนวนอน 16:9 ใส่ในตัวแปร POSTERS</small></div></div>`}</div></div>`).join("");
+
+/* ===== สภานักเรียน 13 คน ===== */
+async function initExec(){
+  const rows = await load("Executives");
+  const list = EXEC_POS.map((pos, i) => Object.assign({ position: pos }, rows && rows[i] ? rows[i] : {}, { position: pos }));
+  $("#egrid").innerHTML = list.map((p, i) => person(p, i < 3)).join("");
+  ALL.push(...list); search();
+}
+
+/* ===== คณะกรรมการ 9 ฝ่าย ===== */
+let committee = null, current = DEPTS[0];
+function showDept(d){
+  current = d;
+  document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.d === d));
+  let rows = committee ? committee.filter(r => r.dept === d) : [{ position: "หัวหน้าฝ่าย" }, { position: "รองหัวหน้าฝ่าย" }, { position: "กรรมการ" }];
+  const g = $("#cgrid");
+  g.innerHTML = rows.length ? rows.map(r => person(r)).join("") : `<p class="empty">ยังไม่มีรายชื่อของฝ่ายนี้</p>`;
+  g.classList.remove("swap"); void g.offsetWidth; g.classList.add("swap");
+}
+async function initCommittee(){
+  $("#tabs").innerHTML = DEPTS.map(d => `<button class="tab" role="tab" data-d="${esc(d)}">${esc(d)}</button>`).join("");
+  $("#tabs").onclick = e => { const b = e.target.closest(".tab"); if (b) showDept(b.dataset.d); };
+  committee = await load("Committee");
+  if (Array.isArray(committee)) {
+    committee = committee.map(r => ({
+      ...r,
+      dept: String(r.dept ?? "").trim(),
+      name: String(r.name ?? "").trim(),
+      class: String(r.class ?? "").trim(),
+      position: String(r.position ?? "").trim(),
+      contact: String(r.contact ?? "").trim(),
+      photo: String(r.photo ?? "").trim()
+    }));
+  }
+  if (committee) ALL.push(...committee);
+  showDept(current); search();
+}
+
+/* ===== ผลงาน ===== */
+async function initWorks(){
+  let rows = await load("Works");
+  if (!rows || !rows.length) rows = [1, 2, 3].map(n => ({ title: `ชื่อผลงาน ${n}`, date: "", desc: "คำอธิบายผลงานหรือข่าวประชาสัมพันธ์", tag: "กิจกรรม" }));
+  $("#wgrid").innerHTML = rows.map(w => {
+    const d = w.date ? new Date(w.date) : null;
+    const ds = d && !isNaN(d) ? d.toLocaleDateString("th-TH", { dateStyle: "long" }) : "";
+    return `<article class="wcard rv tilt"><div class="wimg">${w.image ? `<img src="${esc(img(w.image))}" alt="" loading="lazy">` : ""}</div>
+      <div class="wb"><span class="tag">${esc(w.tag || "ประชาสัมพันธ์")}</span><h3>${esc(w.title)}</h3>
+      <p>${esc(w.desc)}</p>${ds ? `<time>${ds}</time>` : ""}</div></article>`;
+  }).join("");
+}
+
+/* ===== ฟอร์มร้องทุกข์ ===== */
+$("#form").addEventListener("submit", async e => {
+  e.preventDefault();
+  const f = e.target, m = $("#msg"), b = $("#send");
+  if (!API_URL){ m.className = "err"; m.textContent = "ยังไม่ได้เชื่อมต่อระบบ กรุณาตั้งค่า API_URL ในไฟล์ index.html"; return; }
+  b.disabled = true; m.className = ""; m.textContent = "กำลังส่ง…";
+  try {
+    await fetch(API_URL, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(Object.fromEntries(new FormData(f))) });
+    m.className = "ok"; m.textContent = "ส่งเรื่องเรียบร้อยแล้ว สภานักเรียนจะติดตามให้"; f.reset(); confetti();
+  } catch { m.className = "err"; m.textContent = "ส่งไม่สำเร็จ กรุณาตรวจสอบอินเทอร์เน็ตแล้วลองใหม่"; }
+  b.disabled = false;
+});
+
+/* ===== ตราจาก Drive (ถ้าตั้งค่าใน LOGOS) ===== */
+LOGOS.forEach((u, i) => {
+  if (!u.trim()) return;
+  document.querySelectorAll(".crest")[i].innerHTML = `<img src="${esc(img(u))}" alt="${i ? "ตราสภานักเรียน" : "ตราโรงเรียน"}" onerror="this.replaceWith('ตราไม่ขึ้น')">`;
+});
+
+/* ===== เมนูมือถือ ===== */
+const bg = $(".burger"), nv = $("nav");
+const menu = o => { nv.classList.toggle("open", o); bg.setAttribute("aria-expanded", o); };
+bg.addEventListener("click", () => menu(!nv.classList.contains("open")));
+nv.addEventListener("click", e => { if (e.target.closest("a")) menu(false); });
+document.addEventListener("click", e => { if (!e.target.closest("header")) menu(false); });
+addEventListener("keydown", e => { if (e.key === "Escape") menu(false); });
+
+/* ===== จุดบอกตำแหน่งโปสเตอร์บนมือถือ ===== */
+const pz = $("#posters"), dots = $("#dots");
+dots.innerHTML = POSTERS.map(() => "<i></i>").join(""); dots.children[0].classList.add("on");
+pz.addEventListener("scroll", () => {
+  const i = Math.round(pz.scrollLeft / ((pz.scrollWidth - pz.clientWidth) || 1) * (POSTERS.length - 1));
+  [...dots.children].forEach((d, k) => d.classList.toggle("on", k === i));
+}, { passive: true });
+
+/* ===== ค้นหาสมาชิก (สภา + ทุกฝ่าย) ===== */
+function search(){
+  const raw = $("#q").value.trim(), q = raw.toLowerCase(), g = $("#qgrid");
+  $("#egrid").hidden = !!q; g.hidden = !q;
+  if (!q){ $("#qc").textContent = ""; return; }
+  const hit = ALL.filter(p => [p.name, p.class, p.position, p.dept].some(v => String(v ?? "").toLowerCase().includes(q)));
+  $("#qc").textContent = hit.length ? `พบ ${hit.length} รายการ` : "";
+  g.innerHTML = hit.length
+    ? hit.map(p => person(p.dept ? { ...p, position: `${p.dept} (${p.position})` } : p)).join("")
+    : `<p class="empty">ไม่พบ “${esc(raw)}” ลองพิมพ์ชื่อหรือนามสกุลอีกครั้ง</p>`;
+}
+$("#q").addEventListener("input", search);
+
+/* ===== ลูกเล่น ===== */
+const rm = matchMedia("(prefers-reduced-motion:reduce)").matches;
+const hd = document.querySelector("header");
+let lastY = 0;
+addEventListener("scroll", () => {
+  const h = document.documentElement;
+  $("#prog").style.width = scrollY / (h.scrollHeight - innerHeight) * 100 + "%";
+  hd.classList.toggle("small", scrollY > 40);
+  hd.classList.toggle("hide", scrollY > lastY && scrollY > 120); lastY = scrollY;
+}, { passive: true });
+
+// เลื่อนถึงแล้วค่อยๆ โผล่ทีละใบ
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const t = e.target; io.unobserve(t);
+  t.style.transitionDelay = t._i * 80 + "ms"; t.classList.add("in");
+  setTimeout(() => { t.style.transitionDelay = ""; t.classList.add("done"); }, 1000);
+}), { threshold: .1 });
+function watch(){ document.querySelectorAll(".rv:not(.w)").forEach((t, i) => { t.classList.add("w"); t._i = i % 6; io.observe(t); }); }
+document.querySelectorAll(".sh").forEach(e => e.classList.add("rv"));
+new MutationObserver(watch).observe($("main"), { childList: true, subtree: true }); watch();
+
+// เมนูไฮไลต์ตามหัวข้อที่กำลังดู
+const so = new IntersectionObserver(es => es.forEach(e => e.isIntersecting &&
+  document.querySelectorAll("nav a,.bnav a").forEach(a => a.classList.toggle("on", a.hash === "#" + e.target.id))), { rootMargin: "-45% 0px -50% 0px" });
+document.querySelectorAll("section[id]").forEach(x => so.observe(x));
+
+// ตัวเลขนับขึ้น
+const co = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return; co.unobserve(e.target);
+  const to = +e.target.dataset.n; let s = null;
+  const f = t => { s ??= t; const p = Math.min((t - s) / 1200, 1); e.target.textContent = Math.round(to * (1 - (1 - p) ** 3)); if (p < 1) requestAnimationFrame(f); };
+  requestAnimationFrame(f);
+}));
+document.querySelectorAll("[data-n]").forEach(x => co.observe(x));
+
+// แถบชื่อฝ่ายเลื่อนวน
+$("#mq").innerHTML = [...DEPTS, ...DEPTS].map(d => `<span>${esc(d)}</span>`).join("");
+
+// ข้อความพิมพ์ทีละตัว (แก้ประโยคได้ที่นี่)
+const ph = ["ยินดีต้อนรับ", "เข้าสู่เว็บสภานักเรียน", "แจ้งปัญหาได้ทุกเรื่อง"], ty = $("#type");
+let pi = 0, ci = 0, del = false;
+(function tick(){
+  if (rm){ ty.textContent = ph[0]; return; }
+  const w = ph[pi]; ty.textContent = w.slice(0, ci);
+  if (!del && ci === w.length){ del = true; return setTimeout(tick, 1600); }
+  if (del && ci === 0){ del = false; pi = (pi + 1) % ph.length; }
+  ci += del ? -1 : 1; setTimeout(tick, del ? 35 : 80);
+})();
+
+// เอียง 3 มิติ + แสงตามเมาส์
+let last;
+document.addEventListener("pointermove", e => {
+  const g = $("#glow"); g.style.left = e.clientX + "px"; g.style.top = e.clientY + "px";
+  const t = e.target.closest && e.target.closest(".tilt");
+  if (last && last !== t) last.style.transform = "";
+  last = t;
+  if (!t || rm || e.pointerType === "touch") return;
+  const r = t.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+  t.style.transform = `perspective(700px) rotateX(${(.5 - y) * 10}deg) rotateY(${(x - .5) * 12}deg) translateY(-4px)`;
+  t.style.setProperty("--mx", x * 100 + "%"); t.style.setProperty("--my", y * 100 + "%");
+});
+
+// คลิกการ์ดเพื่อดูรายละเอียด
+const dlg = $("#dlg");
+function openCard(k){
+  const p = store[k], ph = img(p.photo), n = p.name || "ชื่อ-นามสกุล", c = String(p.contact || "");
+  dlg.innerHTML = `<button class="x" aria-label="ปิด" onclick="dlg.close()">×</button>
+    <div class="avatar big">${ph ? `<img src="${esc(ph)}" alt="${esc(n)}">` : esc(n.trim()[0] || "?")}</div>
+    <h3>${esc(n)}</h3><div class="cls">${esc(p.class || "ชั้น")}</div><div class="pos">${esc(p.position)}</div>
+    <div class="ct">${/^https?:\/\//.test(c) ? `<a href="${esc(c)}" target="_blank" rel="noopener">ช่องทางติดต่อ</a>` : esc(c || "ช่องทางการติดต่อ")}</div>`;
+  dlg.showModal();
+}
+document.addEventListener("click", e => { const c = e.target.closest(".card[data-k]"); if (c && !e.target.closest("a")) openCard(c.dataset.k); });
+document.addEventListener("keydown", e => { if (e.key === "Enter" && e.target.matches(".card[data-k]")) openCard(e.target.dataset.k); });
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+
+// ส่งเรื่องสำเร็จ ปล่อยกระดาษสี
+function confetti(){
+  if (rm) return;
+  const c = ["#7d4fdc", "#b8923a", "#e4c9f2", "#a98af0"];
+  for (let i = 0; i < 44; i++){
+    const s = document.createElement("i");
+    Object.assign(s.style, { position: "fixed", left: "50%", top: "62%", width: "9px", height: "14px", background: c[i % 4], borderRadius: "2px", zIndex: 99, pointerEvents: "none" });
+    document.body.append(s);
+    const a = Math.random() * 6.28, d = 150 + Math.random() * 260;
+    s.animate([{ transform: "none", opacity: 1 }, { transform: `translate(${Math.cos(a) * d}px,${Math.sin(a) * d - 120}px) rotate(${Math.random() * 720}deg)`, opacity: 0 }],
+      { duration: 1200 + Math.random() * 600, easing: "cubic-bezier(.2,.7,.3,1)" }).onfinish = () => s.remove();
+  }
+}
+
+initExec(); initCommittee(); initWorks();
+
+
+/* ===== เพิ่ม: ระบบเฉพาะสภานักเรียน ===== */
+const councilLoginBtn = $("#councilLoginBtn");
+const councilMobileLogin = $("#councilMobileLogin");
+const councilPage = $("#councilPage");
+const councilBack = $("#councilBack");
+const checkWorkBtn = $("#checkWorkBtn");
+const councilStatus = $("#councilStatus");
+const councilNameSearch = $("#councilNameSearch");
+const councilResult = $("#councilResult");
+let councilStatistics = null;
+
+function normalizeName(v){
+  return String(v ?? "").toLowerCase().replace(/\s+/g, "").replace(/[.。,，'"`]/g, "");
+}
+
+function getStatValue(row, candidates, fallbackIndex){
+  const keys = Object.keys(row || {});
+  const normalizedKeys = keys.map(k => normalizeName(k));
+  for (const candidate of candidates){
+    const i = normalizedKeys.findIndex(k => k.includes(normalizeName(candidate)));
+    if (i >= 0) return row[keys[i]];
+  }
+  const values = Object.values(row || {});
+  return fallbackIndex >= 0 && values.length > fallbackIndex ? values[fallbackIndex] : "";
+}
+
+function normalizeCommitteeStatistics(rows){
+  if (!Array.isArray(rows)) return [];
+  return rows.map(row => ({
+    raw: row,
+    statName: String(row.name ?? "").trim(),
+    statAbsent: "",
+    statPresent: "",
+    statPercent: row.statistics ?? ""
+  })).filter(r => r.statName);
+}
+
+
+async function loadCouncilCommittee(){
+  if (Array.isArray(committee)) return committee;
+  committee = await load("Committee");
+  if (Array.isArray(committee)) committee = committee.map(r => ({...r,dept:String(r.dept??"").trim(),name:String(r.name??"").trim(),class:String(r.class??"").trim(),position:String(r.position??"").trim(),contact:String(r.contact??"").trim(),photo:String(r.photo??"").trim()}));
+  return committee;
+}
+
+async function loadCouncilStatistics(){
+  if (Array.isArray(councilStatistics)) return councilStatistics;
+  councilStatistics = normalizeCommitteeStatistics(await load("Committee"));
+  return councilStatistics;
+}
+
+function openCouncilLogin(){
+  const password = prompt("กรุณาใส่รหัสสำหรับสภานักเรียน");
+  if (password === null) return;
+  if (password !== "2569") { alert("รหัสไม่ถูกต้อง"); return; }
+  councilPage.hidden = false;
+  document.body.style.overflow = "hidden";
+}
+
+councilLoginBtn.addEventListener("click", openCouncilLogin);
+councilMobileLogin.addEventListener("click", openCouncilLogin);
+
+councilBack.addEventListener("click", () => {
+  councilPage.hidden = true;
+  councilStatus.hidden = true;
+  councilResult.innerHTML = "";
+  councilNameSearch.value = "";
+  document.body.style.overflow = "";
+});
+
+checkWorkBtn.addEventListener("click", async () => {
+  councilStatus.hidden = false;
+  councilResult.innerHTML = '<p style="color:#15803d;">กำลังโหลดข้อมูลสมาชิกและสถานะการทำงาน...</p>';
+  try {
+    const [committeeData, statsData] = await Promise.all([loadCouncilCommittee(),loadCouncilStatistics()]);
+    if (!Array.isArray(committeeData) && !Array.isArray(statsData)) {
+      councilResult.innerHTML = '<p class="council-error">ไม่สามารถโหลดข้อมูลจาก Google Sheet ได้</p>';
+      return;
+    }
+    councilResult.innerHTML = '<p style="color:#15803d;">พิมพ์ชื่อของตนเองในช่องค้นหา</p>';
+    councilNameSearch.focus();
+  } catch (err) {
+    console.error(err);
+    councilResult.innerHTML = '<p class="council-error">เกิดข้อผิดพลาดในการโหลดข้อมูล</p>';
+  }
+});
+
+councilNameSearch.addEventListener("input", async () => {
+  const raw = councilNameSearch.value.trim();
+  if (!raw) { councilResult.innerHTML = '<p style="color:#15803d;">พิมพ์ชื่อของตนเองในช่องค้นหา</p>'; return; }
+  const q = normalizeName(raw);
+  try {
+    const [committeeData, statsData] = await Promise.all([loadCouncilCommittee(),loadCouncilStatistics()]);
+    const committeeFound = Array.isArray(committeeData) ? committeeData.filter(row => [row.name,row.class,row.position,row.dept].some(v => normalizeName(v).includes(q))) : [];
+    const statisticsFound = Array.isArray(statsData) ? statsData.filter(row => normalizeName(row.statName).includes(q)) : [];
+    if (!committeeFound.length && !statisticsFound.length) { councilResult.innerHTML = `<p class="council-error">ไม่พบชื่อ “${esc(raw)}”</p>`; return; }
+
+    let member = committeeFound[0] || null;
+    if (!member && statisticsFound[0]) {
+      const statName = normalizeName(statisticsFound[0].statName);
+      member = committeeData?.find(row => normalizeName(row.name) === statName) || {name:statisticsFound[0].statName,class:"",position:"",contact:"",photo:"",dept:""};
+    }
+
+    let stat = null;
+    if (member && Array.isArray(statsData)) {
+      const memberName = normalizeName(member.name);
+      stat = statsData.find(row => normalizeName(row.statName) === memberName);
+      if (!stat) stat = statsData.find(row => normalizeName(row.statName).includes(memberName) || memberName.includes(normalizeName(row.statName)));
+    }
+    if (!stat && statisticsFound.length) stat = statisticsFound[0];
+
+    const memberHTML = member ? `<div class="grid council-member-grid">${person(member)}</div>` : "";
+    let statHTML = "";
+    if (stat) {
+      const absent = stat.statAbsent === "" || stat.statAbsent == null ? "-" : stat.statAbsent;
+      const present = stat.statPresent === "" || stat.statPresent == null ? "-" : stat.statPresent;
+      let percent = stat.statPercent === "" || stat.statPercent == null ? "-" : stat.statPercent;
+      const num = typeof percent === "number" ? percent : Number(String(percent).replace(/,/g,"").replace("%","").trim());
+      if (!Number.isNaN(num)) percent = num >= 0 && num <= 1 ? (Math.round(num*10000)/100)+"%" : num+"%";
+      statHTML = `<div class="council-result"><div class="council-stat"><b>${esc(absent)}</b><span>ไม่มา</span></div><div class="council-stat"><b>${esc(present)}</b><span>มา</span></div><div class="council-stat"><b>${esc(percent)}</b><span>เปอร์เซ็นต์การทำงาน</span></div></div>`;
+    } else {
+      statHTML = `<div class="council-result"><div class="council-stat"><b>-</b><span>ไม่มา</span></div><div class="council-stat"><b>-</b><span>มา</span></div><div class="council-stat"><b>-</b><span>เปอร์เซ็นต์การทำงาน</span></div></div><p class="council-source-note">พบชื่อสมาชิกแล้ว แต่ยังไม่พบค่า statistics ของชื่อนี้ในชีต Committee</p>`;
+    }
+    councilResult.innerHTML = `${memberHTML}${statHTML}<p class="council-source-note">ค้นหาจากชีต Committee และคอลัมน์ statistics</p>`;
+  } catch (err) {
+    console.error(err);
+    councilResult.innerHTML = '<p class="council-error">เกิดข้อผิดพลาดในการค้นหาข้อมูล</p>';
+  }
+});
+
+/* ===== เพิ่ม: โปรไฟล์ค่อย ๆ โผล่ตามการเลื่อน ===== */
+(function(){
+  const selector = [
+    ".committee-card",
+    ".exec-card",
+    ".member-card",
+    ".person-card",
+    ".profile-card",
+    ".committee-item",
+    ".council-card"
+  ].join(",");
+
+  const prepare = () => {
+    const cards = [...document.querySelectorAll(selector)]
+      .filter(el => !el.dataset.revealReady);
+
+    cards.forEach((el, i) => {
+      el.dataset.revealReady = "1";
+      el.classList.add("reveal-profile");
+      el.style.setProperty("--reveal-delay", `${(i % 6) * 90}ms`);
+      if (i % 2 === 0) el.classList.add("reveal-left");
+      else el.classList.add("reveal-right");
+      observer.observe(el);
+    });
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, {
+    threshold:.12,
+    rootMargin:"0px 0px -7% 0px"
+  });
+
+  prepare();
+
+  const main = document.querySelector("main") || document.body;
+  new MutationObserver(prepare).observe(main, {
+    childList:true,
+    subtree:true
+  });
+})();
+
+</script>
+</body>
+</html>
